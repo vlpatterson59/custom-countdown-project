@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 
 html {
   box-sizing: border-box;
@@ -10,15 +10,17 @@ body {
   overflow-y: hidden;
   display: flex;
   align-items: center;
-
+  font-family: 'RocknRoll One', sans-serif;
 }
 
 /* Video Background */
+/* Video by <a href="https://pixabay.com/users/asabovebelowloa-6658932/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=50803">asabovebelowloa</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=50803">Pixabay</a> */
 .video-background {
   position: fixed;
   right: 0;
   bottom: 0;
-
+  width: 100vw;
+  height: auto;
 }
 
 video {
@@ -32,7 +34,9 @@ video {
   position: fixed;
   left: 0;
   top: 0;
-
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.35);
 }
 
 /* Container */
@@ -46,7 +50,7 @@ video {
   z-index: 2;
   display: flex;
   justify-content: center;
-
+  background:rgba(255, 255, 255, 0.85)
 }
 
 .input-container {
@@ -79,7 +83,7 @@ input {
   border-radius: 20px;
   background: #fff;
   outline: none;
-
+  font-family: 'RocknRoll One', sans-serif;
 }
 
 /* Button */
@@ -96,7 +100,9 @@ button {
   outline: none;
 }
 
-
+button:hover {
+    filter: brightness(110%);
+}
 
 /* Countdown */
 ul {
@@ -127,16 +133,19 @@ li span {
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
   .video-background {
-
+    height: 100vh;
+    width: 100vw;
   }
   
   video {
-
+    object-fit: cover;
+    object-position: 28%;
     margin-top: -1px;
   }
 
   .container {
-
+    min-width: unset;
+    width: 95vw;
     min-height: 245px;
     padding: 20px;
     margin: 10px;
